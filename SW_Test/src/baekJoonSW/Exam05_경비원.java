@@ -57,7 +57,7 @@ public class Exam05_경비원 {
 				if(direction == 1 || direction == 2) {
 					ans += Math.min(init.x + init.y + tempPoint.y + tempPoint.x, (X - init.x) + init.y + tempPoint.y + (X-tempPoint.x));
 				}else {
-					ans += Math.min(init.y + init.x + tempPoint.x + tempPoint.y, (Y - init.y) + init.x + tempPoint.x + (Y-tempPoint.y));
+					ans += Math.min(init.y + init.x + tempPoint.x + tempPoint.y, (Y - init.y) + init.x + (Y-tempPoint.y));
 				}
 			}else {
 				ans += Math.abs(init.x - tempPoint.x) + Math.abs(init.y - tempPoint.y); 
