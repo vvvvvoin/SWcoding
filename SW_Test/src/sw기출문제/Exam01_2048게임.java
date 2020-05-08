@@ -27,7 +27,6 @@ public class Exam01_2048게임 {
 				map[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
-
 		System.out.println(solution(map));
 	}
 
@@ -35,7 +34,8 @@ public class Exam01_2048게임 {
 	static int MAX2;
 	static int solution(int[][] map) {
 		q.add(new Pos(map, 0));
-		while (q.isEmpty()) {
+		MAX2 = 0;
+		while (!q.isEmpty()) {
 			Pos temp = q.poll();
 			if (temp.cnt > 5) {
 				MAX2 = Math.max(MAX2, find(temp.map)) ;
@@ -46,21 +46,23 @@ public class Exam01_2048게임 {
 					for (int j = 0; j < N; j++) {
 						if (tempMap[i][j] == 0)
 							continue;
-						int nextI = i + dirI[p];
-						int nextJ = j + dirJ[p];
+						int nextI = i ;
+						int nextJ = j ;
 						while (true) {
 							if (nextI < 0 || nextJ < 0 || nextI >= N || nextJ >= N) {
 								nextI -= dirI[p];
 								nextJ -= dirJ[p];
 								break;
 							}
-							if (tempMap[nextI][nextJ] == 0) {
+							if (tempMap[nextI][nextJ] != 0) {
 								nextI += dirI[p];
 								nextJ += dirJ[p];
 							} else {
 								if (tempMap[nextI][nextJ] == tempMap[nextI + dirI[p]][nextJ + dirJ[p]]) {
+									System.out.println(tempMap[nextI + dirI[p]][nextJ + dirJ[p]]);
 									tempMap[nextI][nextJ] = 0;
 									tempMap[nextI + dirI[p]][nextJ + dirJ[p]] *= 2;
+									break;
 								} else {
 									break;
 								}
@@ -75,12 +77,12 @@ public class Exam01_2048게임 {
 	}
 
 	static int MAX;
-
 	static int find(int[][] map2) {
 		MAX = 0;
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				MAX = Math.max(MAX, map2[i][j]);
+				System.out.println("////////////////");
 			}
 		}
 		return MAX;
