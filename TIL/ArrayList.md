@@ -167,7 +167,7 @@ System.out.println(arrayList1.indexOf("사과"));
 - 인자로 들어간 값의 인덱스를 반환하는데 가장 뒤쪽에 존재하는 값을 리턴합니다
 - 값이 없다면 -1을 리턴합니다
 
-- ```java
+```java
 ArrayList<String> arrayList1 = new ArrayList<>();
 arrayList1.add("apple");
 arrayList1.add("apple2");
@@ -183,6 +183,7 @@ System.out.println(arrayList1.lastIndexOf("사과"));
 
 #### contains()
 - 인자로 전달된 값이 리스트에 존재하면 true를 리턴합니다
+
 ```java
 ArrayList<String> arrayList1 = new ArrayList<>();
 arrayList1.add("apple");
@@ -190,7 +191,7 @@ arrayList1.add("banana");
 arrayList1.add("tomato");
 arrayList1.add("melon");
 arrayList1.add("watermelon");
-	
+
 System.out.println(arrayList1.contains("tomato"));
 System.out.println(arrayList1.contains("토마토"));
 //true
