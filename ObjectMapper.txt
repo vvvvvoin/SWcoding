@@ -1,0 +1,54 @@
+package test;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+class Test {
+	private static Person person1;
+	private static Person person2;
+	static ObjectMapper objectMapper= new ObjectMapper();
+	public static void main(String[] args) throws Exception{
+		person1 = new Person();
+		person1.setName("홍길동");
+		person1.setAge(10);
+//		String jsonData = objectMapper.writeValueAsString(person1);
+//		System.out.println(jsonData);
+		String jsonData = "{\"name\":\"김길동\",\"age\":20}";
+		System.out.println("jsonData = " + jsonData);
+		System.out.println("person1 = "+ person1);
+		person2 = person1;
+		
+		System.out.println("person2 = "+person2);
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		//미리 선언된 person2의 값을 넣는데 주소값이 변경됨 
+		person2 = objectMapper.readValue(jsonData, Person.class);
+		System.out.println("person2 = "+person2);
+		System.out.println("person1 = "+person1);
+		
+		person1.setName(person2.getName());
+		person1.setAge(person2.getAge());
+		System.out.println(person1.getName());
+		System.out.println(person1.getAge());
+		System.out.println("person2 = "+person2);
+		System.out.println("person1 = "+person1);
+
+//		출력결과
+//		jsonData = {"name":"김길동","age":20}
+//		person1 = test.Person@63d4e2ba
+//		person2 = test.Person@63d4e2ba
+//		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//		person2 = test.Person@13c78c0b
+//		person1 = test.Person@63d4e2ba
+//		김길동
+//		20
+//		person2 = test.Person@13c78c0b
+//		person1 = test.Person@63d4e2ba
+
+	}
+
+}
