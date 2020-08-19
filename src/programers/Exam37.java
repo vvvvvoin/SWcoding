@@ -1,6 +1,6 @@
 package programers;
 
-public class ExamTest02 {
+public class Exam37 {
 	static String dartResult = "1D2S3T*";
 	public static void main(String[] args) {
 		int answer = 0;

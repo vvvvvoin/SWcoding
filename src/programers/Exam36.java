@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class ExamTest {
+public class Exam36 {
 	static int N = 5;
 	static int[] stages  = {2, 1, 2, 6, 2, 4, 3, 3};
 	public static void main(String[] args) {

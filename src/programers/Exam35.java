@@ -1,33 +1,62 @@
 package programers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.TreeMap;
 
 public class Exam35 {
 	static int N = 5;
-	static int[] stages = {2, 1, 2, 6, 2, 4, 3, 3};
+	static int[] stages = { 2, 1, 2, 6, 2, 4, 3, 3 };
+
 	public static void main(String[] args) {
-		HashMap<Integer, Double> map = new HashMap<Integer, Double>();
-		ArrayList<Integer> arrayList = new ArrayList<Integer>();
-		for(int num : stages) {
-			arrayList.add(num);
-		}
-		double cal = 0;
-		int temp = 0;
-		for (int i = 1; i <= N; i++) {
-			cal = 0;
-			temp = 0;
-			for (int j = 0; j < arrayList.size(); j++) {
-				if(i == stages[j]) {
-					temp++;
-				}
-			}
-			cal = temp/arrayList.size();
-			arrayList.remove();
-			map.put(i, cal);
+		Stage[] mStages = new Stage[N];
+
+		for (int i = 0; i < N; i++) {
+			mStages[i] = new Stage(i + 1);
 		}
 
+		for (int user : stages) {
+			if (user <= N) {
+				mStages[user - 1].count++;
+			}
+		}
+
+		int nowStageUser = stages.length;
+		for (Stage stage : mStages) {
+			if (stage.count == 0 || nowStageUser == 0) {
+				stage.failRate = 0.0;
+			} else {
+				stage.failRate = (double) stage.count / nowStageUser;
+				nowStageUser -= stage.count;
+			}
+		}
+
+		Arrays.sort(mStages);
+		int[] answer = new int[N];
+		for (int i = 0; i < N; i++) {
+			answer[i] = mStages[i].stageNumber;
+		}
+		System.out.println(answer);
+	}
+
+	static class Stage implements Comparable {
+		int stageNumber;
+		int count;
+		double failRate;
+
+		public Stage(int stage) {
+			this.stageNumber = stage;
+		}
+
+		@Override
+		public int compareTo(Object o) {
+			Stage otherStage = (Stage) o;
+			if (this.failRate == otherStage.failRate) {
+				return Integer.compare(this.stageNumber, otherStage.stageNumber);
+			}
+			return -Double.compare(this.failRate, otherStage.failRate);
+		}
 	}
 }
