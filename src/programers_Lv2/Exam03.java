@@ -32,6 +32,20 @@ public class Exam03 {
 //			queue.clear();
 //			if(index >= prices.length) break;
 //		}
+		int time = 0;
+		int[] answer = new int[prices.length];
+		for (int i = 0; i < prices.length; i++) {
+			for (int j = i+1; j < prices.length; j++) {
+				if(prices[i] <= prices[j]) {
+					time++;
+				}else {
+					time++;
+					break;
+				}
+			}
+			answer[i] = time;
+			time = 0;
+		}
 		
 		for (int value : answer) {
 			System.out.println(value);
