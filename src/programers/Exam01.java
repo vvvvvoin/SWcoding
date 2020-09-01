@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class Exam01 {
-	static String[] participant = {"leo", "kiki", "eden"};
-	static String[] completion = {"eden", "kiki"};
+	static String[] participant = {"mislav", "stanko", "mislav", "ana"};
+	static String[] completion = {"stanko", "ana", "mislav"};
 	public static void main(String[] args) {
 		HashMap<String, Integer> hash = new HashMap<String, Integer>();
 		for(String str : participant) {
-			hash.put(str, hash.getOrDefault(str, 1));
+			hash.put(str, hash.getOrDefault(str, 0) + 1);
 		}
 		
 		for(String str : completion) {
