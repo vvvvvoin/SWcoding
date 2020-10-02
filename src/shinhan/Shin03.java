@@ -8,6 +8,7 @@ import java.util.Queue;
 
 public class Shin03 {
 	public static void main(String[] args) throws Exception {
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String input = br.readLine();
 		int raw = Integer.parseInt(input.split(" ")[0]);

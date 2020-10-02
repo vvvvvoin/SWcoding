@@ -1,6 +1,5 @@
 package programers_Lv2;
 
-import java.lang.Character.Subset;
 
 public class Exam07 {
 	static String s = "ababcdcdababcdcd";

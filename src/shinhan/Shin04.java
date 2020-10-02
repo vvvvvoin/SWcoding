@@ -3,7 +3,6 @@ package shinhan;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import javax.swing.event.AncestorEvent;
 
 public class Shin04 {
 	static int answer = 0;
@@ -33,7 +32,9 @@ public class Shin04 {
 			for(String a : array) {
 				temp += a;
 			}
+			System.out.println(temp);
 			cal(temp);
+			return;
 		}
 		
 		for(int i = index; i < array.length; i++) {
@@ -81,7 +82,7 @@ public class Shin04 {
 			}
 
 		}
-		
+		System.out.println(sum);
 		if(Math.abs(sum) <= 2) {
 			answer++;
 		}

@@ -3,7 +3,7 @@ package programers_Lv2;
 import java.util.ArrayList;
 
 public class Exam13 {
-	static String numbers = "0000007";
+	static String numbers = "17";
 	static String[] array;
 	static boolean[] visited;
 	static ArrayList<Integer> arrayList;
@@ -39,7 +39,7 @@ public class Exam13 {
 		if(!arrayList.contains(Integer.parseInt(string)) && check(Integer.parseInt(string))) {
 			arrayList.add(Integer.parseInt(string));
 		}
-		
+		System.out.println(string);
 		for(int i=0; i<array.length; i++){
             if(visited[i] == false){
                 visited[i] = true;

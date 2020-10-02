@@ -10,7 +10,6 @@ public class Shin01 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String input = br.readLine();
-		
 		int start = Integer.parseInt(input.split(" ")[0]);
 		int end = Integer.parseInt(input.split(" ")[1]);
 		int answer = 0;
