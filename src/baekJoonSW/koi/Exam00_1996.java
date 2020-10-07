@@ -63,7 +63,7 @@ public class Exam00_1996 {
 		return cnt;
 	}
 	
-	static class Pos{
+	private static class Pos{
 		private int i;
 		private int j;
 		public Pos(int i, int j) {

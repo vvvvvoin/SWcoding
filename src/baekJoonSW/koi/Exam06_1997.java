@@ -10,6 +10,9 @@ public class Exam06_1997 {
 	static int[][] array;
 	static ArrayList<Pos> list;
 	public static void main(String[] args) throws Exception {
+		//정올에서는 모든 테스트케이스를 통과하는데
+		//백준에서는 실패한다.
+		//워낙 자바로 푼사람이 없어서 개념잡기가 어렵다.
 		br = new BufferedReader(new InputStreamReader(System.in));
 		list = new ArrayList<Pos>(); 
 		array = new int[10][10];
