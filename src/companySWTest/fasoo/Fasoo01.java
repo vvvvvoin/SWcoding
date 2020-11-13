@@ -3,7 +3,7 @@ package fasoo;
 import java.util.HashMap;
 
 public class Fasoo01 {
-	static String s=  "";
+	static String s=  "{cpp{java}}{python}";
 	static int[] idx = {0, 4, 9, 10, 11, 18};	
 	public static void main(String[] args) {
 		int[] answer = new int[idx.length];

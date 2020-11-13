@@ -5,7 +5,12 @@ import java.util.Collections;
 import java.util.HashMap;
 
 public class Fasoo02 {
-	static String[] nums = {};
+	static String[] nums = {"4514--234495-1","305-44-291501",
+									"1-2-34-495-8623","492134545151",
+									"623-421523-67-341","-5439-59639921",
+									"6235-7X3+47-7456","98-76-543-210",
+									"512-73-634901","000-999999-22-555"
+									,"064-82-792561"};
 	public static void main(String[] args) {
 		for(int i = 0; i < nums.length; i++) {
 			if(nums[i].charAt(0) == '-' || nums[i].charAt(nums[i].length() - 1) == '-') {
