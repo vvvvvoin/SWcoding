@@ -1,4 +1,4 @@
-package line;
+package companySWTest.line;
 
 public class Line03 {
 	static int n = 73425;

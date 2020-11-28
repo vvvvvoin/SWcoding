@@ -1,9 +1,8 @@
-package kakao;
+package companySWTest.kakao;
 
 import java.util.HashMap;
 import java.util.HashSet;
 
-import kakao.Kakao03.Person;
 
 public class Kakao03_2 {
 	static String[] info = {"java backend junior pizza 150",

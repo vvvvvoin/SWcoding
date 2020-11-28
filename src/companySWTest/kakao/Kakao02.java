@@ -1,4 +1,4 @@
-package kakao;
+package companySWTest.kakao;
 
 import java.util.ArrayList;
 import java.util.Arrays;

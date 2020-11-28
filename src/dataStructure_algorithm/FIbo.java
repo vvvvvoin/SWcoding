@@ -1,4 +1,4 @@
-package dataStructure;
+package dataStructure_algorithm;
 
 public class FIbo {
 	public static void main(String[] args) {

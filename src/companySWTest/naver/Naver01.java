@@ -1,4 +1,4 @@
-package naver;
+package companySWTest.naver;
 
 public class Naver01 {
 	static int n = 6;

@@ -1,4 +1,4 @@
-package dataStructure;
+package dataStructure_algorithm;
 
 public class BinaraySearchTree01 {
 	static private class Tree{

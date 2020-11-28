@@ -1,4 +1,4 @@
-package dataStructure;
+package dataStructure_algorithm;
 
 public class BinaryTree01 {
 	private static class Node{

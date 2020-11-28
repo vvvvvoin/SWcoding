@@ -1,4 +1,4 @@
-package naver;
+package companySWTest.naver;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package kakao;
+package companySWTest.kakao;
 
 public class Kakao01 {
 	static String new_id = "abcdefghijklmn.p";

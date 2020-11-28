@@ -1,4 +1,4 @@
-package shinhan;
+package companySWTest.shinhan;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

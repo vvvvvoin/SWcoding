@@ -1,4 +1,4 @@
-package dataStructure;
+package dataStructure_algorithm;
 
 //https://www.youtube.com/watch?v=C1SDkdPvQPA
 //첫번째 노드를 삭제할 수 없는 문제점이 있음

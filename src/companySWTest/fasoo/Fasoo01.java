@@ -1,4 +1,4 @@
-package fasoo;
+package companySWTest.fasoo;
 
 import java.util.HashMap;
 

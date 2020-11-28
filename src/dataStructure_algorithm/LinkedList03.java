@@ -1,7 +1,7 @@
-package dataStructure;
+package dataStructure_algorithm;
 
-import dataStructure.LinkedList03.LinkedList.Node;
-import dataStructure.LinkedList03.LinkedList.Reference;
+import dataStructure_algorithm.LinkedList03.LinkedList.Node;
+import dataStructure_algorithm.LinkedList03.LinkedList.Reference;
 
 /*
 단방향 LinkedList의 끝에서

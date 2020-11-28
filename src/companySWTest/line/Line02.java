@@ -1,4 +1,4 @@
-package line;
+package companySWTest.line;
 
 import java.util.ArrayList;
 import java.util.HashSet;
