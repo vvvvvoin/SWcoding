@@ -17,6 +17,7 @@ public class Exam08 {
 		
 		dfs(0, "ICN", "ICN");
 		Collections.sort(list);
+		System.out.println(list);
 		String[] answer = list.get(0).trim().split(" ");
 		System.out.println(answer);
 	}
