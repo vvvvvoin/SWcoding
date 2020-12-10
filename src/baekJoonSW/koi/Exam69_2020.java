@@ -27,7 +27,7 @@ public class Exam69_2020 {
 				int index = 0;
 				int temp = 100000000;
 				
-				for(int j = 0; j < arr.length - 1; j++) {
+				for(int j = 0; j < arr.length; j++) {
 					if(temp > Math.abs(value - (sum + arr[j]))) {
 						temp = Math.abs(value - (sum + arr[j]));
 						index = j;
