@@ -25,7 +25,6 @@ public class Exam29 {
 					dp[i][j] = Math.max(dp[i][j - 1], dp[i - 1][j]);
 				}
 			}
-			
 		}
 		System.out.println(dp[str1.length][str2.length]);
 		Stack<String> stack = new Stack<String>();

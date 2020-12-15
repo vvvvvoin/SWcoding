@@ -52,7 +52,6 @@ public class Exam40 {
 				answer[answer.length / 2] = (char)(i + 'A');
 			}
 		}
-		
 	}
 
 
