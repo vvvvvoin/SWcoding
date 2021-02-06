@@ -22,22 +22,22 @@ public class Exam62 {
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
 		Memory[] arr = new Memory[n + 1];
-		int[][] dp = new int[n + 1][100001];
 		
-		st = new StringTokenizer(br.readLine());
+		StringTokenizer ust = new StringTokenizer(br.readLine());
+		StringTokenizer dst = new StringTokenizer(br.readLine());
+		int coast = 0 ;
 		for(int i = 1; i <= n; i++) {
-			int useM = Integer.parseInt(st.nextToken());
-			arr[i] = new Memory(useM, 0);
+			int useM = Integer.parseInt(ust.nextToken());
+			int deleM = Integer.parseInt(dst.nextToken());
+			coast += deleM;
+			arr[i] = new Memory(useM, deleM);
 		}
-		st = new StringTokenizer(br.readLine());
-		for(int i = 1; i <= n; i++) {
-			int deleM = Integer.parseInt(st.nextToken());
-			arr[i].deleteMemory = deleM;
-		}
+		
+		int[][] dp = new int[n + 1][coast + 1];
 		
 		int answer = 9999999;
 		for(int i = 1; i <= n; i++) {
-			for(int j = 0; j <= 100000; j++) {
+			for(int j = 0; j <= coast; j++) {
 				if(j >= arr[i].deleteMemory) {
 					dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - arr[i].deleteMemory] + arr[i].useMemory);
 				}else {
